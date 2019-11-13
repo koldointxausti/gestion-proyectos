@@ -51,6 +51,20 @@ nav > ul > li > a:hover{
 	padding: 5% 10%;
 }
 
+table{
+	width:100%;
+}
+table td{
+	padding:.5em 0;
+}
+table tr:first-of-type{
+	background-color: #5e5e5e;
+	color:white;
+}
+table tr:nth-child(even):not(:first-of-type){
+	background-color: #dedede;
+}
+
 /* --------------------------- FOOTER -------------------------- */
 
 footer{

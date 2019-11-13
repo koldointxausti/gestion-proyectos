@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/empleados',function(){return view('empleados.index');})->name('empleados');
-Route::get('/proyectos',function(){return view('proyectos.index');})->name('proyectos');
-Route::get('/departamentos',function(){return view('departamentos.index');})->name('departamentos');
+Route::get('/departamentos','DepartamentoController@index')->name('departamentos');
+Route::get('/empleados','EmpleadoController@index')->name('empleados');
+Route::get('/proyectos','ProyectoController@index')->name('proyectos');
