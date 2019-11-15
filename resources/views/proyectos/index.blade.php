@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'UD5. ORM')
+@section('title', 'Proyectos')
 
 @section('content')
 
@@ -18,13 +18,13 @@
       </tr>
       @foreach($proyectos as $proyecto)
       <tr>
-        <td>{{$proyecto->id}}</td>
+        <td><a href="{{route('proyecto',['id'=>$proyecto->id])}}">{{$proyecto->id}}</a></td>
         <td>{{$proyecto->nombre}}</td>
         <td>{{$proyecto->titulo}}</td>
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
-        <td>{{$proyecto->empleado->nombre}}</td>
+        <td><a href="{{route('empleado',['id' => $proyecto->empleado->id])}}">{{$proyecto->empleado->nombre}}</a></td>
       </tr>
       @endforeach
     </table>

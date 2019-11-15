@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'UD5. ORM')
+@section('title', 'Departamentos')
 
 @section('content')
 
