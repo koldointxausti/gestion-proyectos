@@ -1,12 +1,18 @@
-<?xml version="1.0" standalone="no"?>
-<svg
-  width="600"
-  height="600"
-  viewBox="0 0 600 600"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g transform="translate(300,300)">
-    <path d="M149.2,-116.6C197.8,-58,244.6,4.2,235.6,57.8C226.6,111.3,161.7,156.1,93.8,185.1C25.9,214.1,-45,227.3,-103.4,203.5C-161.7,179.7,-207.6,118.8,-217.6,55.3C-227.6,-8.2,-201.8,-74.2,-159.5,-131.4C-117.3,-188.5,-58.6,-236.8,-4.2,-233.4C50.3,-230.1,100.6,-175.2,149.2,-116.6Z" fill="#fcb900" />
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_3_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <path id="svg_2" fill="#fcb900" d="m449.200012,183.399994c48.599976,58.600006 95.399963,120.800018 86.399963,174.399994c-9,53.5 -73.899963,98.300018 -141.799988,127.300018c-67.899994,28.999969 -138.799988,42.199982 -197.199982,18.399994c-58.300003,-23.799988 -104.200012,-84.700012 -114.200012,-148.200012c-10,-63.5 15.800003,-129.499985 58.100006,-186.699982c42.199997,-57.100006 100.899994,-105.400009 155.299988,-102c54.5,3.299988 104.800018,58.199997 153.400024,116.799988z"/>
   </g>
+  <text filter="url(#svg_3_blur)" transform="matrix(1.38569, 0, 0, 1.47602, -79.3006, -61.5182)" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'League Gothic', sans-serif" font-size="250" id="svg_3" y="331.177701" x="172.476922" stroke="#000000" fill="none">K</text>
+ </g>
 </svg>
-  

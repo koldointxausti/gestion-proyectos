@@ -10,8 +10,10 @@
       <tr>
         <th>Id</th>
         <th>Nombre</th>
+        <th>Apellido</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Proyecto asignado</th>
       </tr>
       @foreach($empleados as $empleado)
       <tr>
@@ -20,6 +22,13 @@
         <td>{{$empleado->apellido}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        <td>
+          @isset($empleado->proyecto)
+            {{$empleado->proyecto->nombre}}
+          @else
+            -
+          @endisset
+        </td>
       </tr>
       @endforeach
     </table>
