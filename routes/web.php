@@ -20,3 +20,4 @@ Route::get('/proyectos','ProyectoController@index')->name('proyectos');
 
 Route::get('/empleado/{id}','EmpleadoController@show')->name('empleado');
 Route::get('/proyecto/{id}','ProyectoController@show')->name('proyecto');
+Route::get('/departamento/{id}','DepartamentoController@show')->name('departamento');
