@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Departamento;
 
 class DepartamentosSeeder extends Seeder
 {
@@ -12,6 +13,8 @@ class DepartamentosSeeder extends Seeder
      */
     public function run()
     {
+        factory(Departamento::class,3)->create();
+        /*
         DB::table('departamentos')->insert([
             'nombre' => 'Informática'
         ]);
@@ -21,5 +24,6 @@ class DepartamentosSeeder extends Seeder
         DB::table('departamentos')->insert([
             'nombre' => 'Administración'
         ]);
+        */
     }
 }
