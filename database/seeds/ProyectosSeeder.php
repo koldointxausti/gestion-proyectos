@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Proyecto;
 
 class ProyectosSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class ProyectosSeeder extends Seeder
      */
     public function run()
     {
+        factory(Proyecto::class,5)->create();
+        /*
         DB::table('proyectos')->insert([
             'nombre' => 'Boulevard',
             'titulo' => 'Boulevard (titulo)',
@@ -48,5 +51,6 @@ class ProyectosSeeder extends Seeder
             'fechafin' =>  Carbon::parse('2019-07-19'),
             'horasestimadas' => 17
         ]);
+        */
     }
 }
