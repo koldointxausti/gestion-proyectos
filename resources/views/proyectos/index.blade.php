@@ -5,7 +5,7 @@
 @section('content')
 
   <h2>Proyectos</h2>
-
+    <a href="{{route('proyectos-create')}}">Añadir</a>
     <table>
       <tr>
         <th>Id</th>
@@ -25,6 +25,7 @@
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
         <td><a href="{{route('empleado',['id' => $proyecto->empleado->id])}}">{{$proyecto->empleado->nombre}}</a></td>
+        <td><a href="{{route('proyecto-edit',['id'=>$proyecto->id])}}">Editar</a></td>
       </tr>
       @endforeach
     </table>

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Empleado;
 
 class EmpleadosSeeder extends Seeder
 {
@@ -12,6 +13,9 @@ class EmpleadosSeeder extends Seeder
      */
     public function run()
     {
+        factory(Empleado::class,10)->create();
+
+        /*
         DB::table('empleados')->insert([
             'nombre' => 'Koldo',
             'apellido' => 'Intxausti',
@@ -81,5 +85,6 @@ class EmpleadosSeeder extends Seeder
             'email' => 'a@e.com',
             'telefono' => '616649780'
         ]);
+        */
     }
 }

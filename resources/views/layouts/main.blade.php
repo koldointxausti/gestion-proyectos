@@ -14,7 +14,7 @@
     <body>
         <nav>
             <ul>
-                <li class="logo"><a href="#"><img src="{{asset('/img/logo.svg')}}"></a></li>
+                <li class="logo"><a href="{{route('index')}}"><img src="{{asset('/img/logo.svg')}}"></a></li>
                 <li><a href="{{route('empleados')}}">Empleados</a></li>
                 <li><a href="{{route('proyectos')}}">Proyectos</a></li>
                 <li><a href="{{route('departamentos')}}">Departamentos</a></li>

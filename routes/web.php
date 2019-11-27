@@ -13,11 +13,19 @@
 
 Route::get('/', function () {
     return view('index');
-});
-Route::get('/departamentos','DepartamentoController@index')->name('departamentos');
-Route::get('/empleados','EmpleadoController@index')->name('empleados');
-Route::get('/proyectos','ProyectoController@index')->name('proyectos');
+})->name('index');
 
-Route::get('/empleado/{id}','EmpleadoController@show')->name('empleado');
-Route::get('/proyecto/{id}','ProyectoController@show')->name('proyecto');
+// DEPARTAMENTOS
+Route::get('/departamentos','DepartamentoController@index')->name('departamentos');
 Route::get('/departamento/{id}','DepartamentoController@show')->name('departamento');
+
+// EMPLEADOS
+Route::get('/empleados','EmpleadoController@index')->name('empleados');
+Route::get('/empleado/{id}','EmpleadoController@show')->name('empleado');
+
+// PROYECTOS
+Route::get('/proyectos','ProyectoController@index')->name('proyectos'); // INDEX
+Route::get('/proyectos/create','ProyectoController@create')->name('proyectos-create'); // CREATE
+Route::post('/proyectos','ProyectoController@store')->name('proyectos-store'); // STORE
+Route::get('/proyecto/{id}','ProyectoController@show')->name('proyecto'); // SHOW
+Route::get('/proyectos/{id}/edit','ProyectoController@edit')->name('proyecto-edit');
