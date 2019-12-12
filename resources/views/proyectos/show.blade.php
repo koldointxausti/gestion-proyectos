@@ -31,8 +31,16 @@
         <span>{{$proyecto->horasestimadas}}</span>
       </li>
       <li>
-        <strong>Empleado:</strong>
+        <strong>Empleado encargado:</strong>
         <span><a href="{{route('empleado',['id'=> $proyecto->empleado->id])}}">{{$proyecto->empleado->nombre}}</a></span>
       </li>
+      @isset($proyecto->empleados)
+        <strong>Colaboradores:</strong>
+        <ul style="margin: .5em 0; margin-left: 1.5em">
+        @foreach($proyecto->empleados as $empleado)
+          <li><a href="{{route('empleado',['id'=>$empleado->id])}}">{{$empleado->nombre}}</a></li>
+        @endforeach
+        </ul>
+      @endisset
     </ul>
 @endsection

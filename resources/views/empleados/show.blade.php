@@ -28,6 +28,17 @@
         <span>{{$empleado->telefono}}</span>
       </li>
 
+      @isset($empleado->proyectos)
+        <li>
+          <strong>Colabora en estos proyectos:</strong>
+          @foreach($empleado->proyectos as $proyecto)
+            <ul style="margin: .5em 0; margin-left: 1.5em">
+              <li><a href="{{route('proyectos.show',['proyecto'=>$proyecto->id])}}">{{$proyecto->nombre}}</a></li>
+            </ul>
+          @endforeach
+        </li>
+      @endisset
+
       @isset($empleado->departamento)
       <li>
         <strong>Departamento:</strong>
