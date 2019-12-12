@@ -15,7 +15,14 @@ class ProyectoController extends Controller
     	return view('proyectos.create')->with('empleados', Empleado::all());
     }
     function store(Request $request){
-        // $request->validate([]);
+        $request->validate([
+            'nombre' => 'required',
+            'titulo' => 'required',
+            'fechainicio' => 'required|date',
+            'fechafin' => 'required|date|after:fechainicio',
+            'horasestimadas' => 'required',
+            'empleado_id' => 'required'
+        ]);
     	$proyecto = new Proyecto;
     	$proyecto->nombre = $request->nombre;
     	$proyecto->titulo = $request->titulo;
@@ -33,7 +40,13 @@ class ProyectoController extends Controller
     	return view('proyectos.create')->with('proyecto',$proyecto)->with('empleados', Empleado::all());
     }
     function update(Proyecto $proyecto, Request $request){
-        $proyecto->nombre = $request->nombre;
+        $request->validate([
+            'titulo' => 'required',
+            'fechainicio' => 'required|date',
+            'fechafin' => 'required|date|after:fechainicio',
+            'horasestimadas' => 'required',
+            'empleado_id' => 'required'
+        ]);
         $proyecto->titulo = $request->titulo;
         $proyecto->fechainicio = $request->f_inicio;
         $proyecto->fechafin = $request->f_fin;

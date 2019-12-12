@@ -9,7 +9,7 @@
   method="post">
     @isset($proyecto) @method('PUT')  @endisset
     @csrf
-    <input type="text" name="nombre" placeholder="nombre" @isset($proyecto) value="{{$proyecto->nombre}}" @endisset>
+    <input type="text" name="nombre" placeholder="nombre" @isset($proyecto) value="{{$proyecto->nombre}}" disabled @endisset>
     <input type="text" name="titulo" placeholder="titulo" @isset($proyecto) value="{{$proyecto->titulo}}" @endisset>
     <input type="date" name="f_inicio" placeholder="fecha de inicio" @isset($proyecto) value="{{$proyecto->fechainicio}}" @endisset>
     <input type="date" name="f_fin" placeholder="fecha final" @isset($proyecto) value="{{$proyecto->fechafin}}" @endisset>
