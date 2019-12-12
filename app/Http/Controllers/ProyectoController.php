@@ -18,9 +18,9 @@ class ProyectoController extends Controller
         $request->validate([
             'nombre' => 'required',
             'titulo' => 'required',
-            'fechainicio' => 'required|date',
-            'fechafin' => 'required|date|after:fechainicio',
-            'horasestimadas' => 'required',
+            'f_inicio' => 'required|date',
+            'f_fin' => 'required|date|after:f_inicio',
+            'h_estimadas' => 'required',
             'empleado_id' => 'required'
         ]);
     	$proyecto = new Proyecto;
@@ -42,9 +42,9 @@ class ProyectoController extends Controller
     function update(Proyecto $proyecto, Request $request){
         $request->validate([
             'titulo' => 'required',
-            'fechainicio' => 'required|date',
-            'fechafin' => 'required|date|after:fechainicio',
-            'horasestimadas' => 'required',
+            'f_inicio' => 'required|date',
+            'f_fin' => 'required|date|after:f_inicio',
+            'h_estimadas' => 'required',
             'empleado_id' => 'required'
         ]);
         $proyecto->titulo = $request->titulo;

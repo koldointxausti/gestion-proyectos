@@ -11,4 +11,8 @@ class Empleado extends Model
     {
     	return $this->belongsTo('App\Proyecto','id','empleado_id');
     }
+    public function departamento()
+    {
+    	return $this->belongsTo('App\departamento','id','departamento_id');
+    }
 }

@@ -26,4 +26,9 @@
     </select>
     <input type="submit" name="submit" @isset($proyecto)value="Editar" @else value="Crear" @endisset>
   </form>
+  @if($errors->any())
+    @foreach($errors->all() as $error)
+      <span style="color: tomato; font-weight: bold; text-align: center; width: 100%;">{{$error}}</span><br>
+    @endforeach
+  @endif
 @endsection
