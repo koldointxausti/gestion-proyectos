@@ -15,5 +15,13 @@
         <strong>Nombre:</strong>
         <span>{{$departamento->nombre}}</span>
       </li>
+      <li>
+        <strong>Empleados:</strong>
+        <ul style="margin-left: 2em; margin-top: .5em">
+          @foreach($departamento->empleados as $empleado)
+            <li><a href="{{route('empleado',['id'=>$empleado->id])}}">{{$empleado->nombre}}</a></li>
+          @endforeach
+        </ul>
+      </li>
     </ul>
 @endsection

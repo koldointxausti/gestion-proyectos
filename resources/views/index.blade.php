@@ -56,7 +56,7 @@
 	  <li class="logo"><a href="{{route('index')}}"><img src="{{asset('/img/logo.svg')}}"  ></a></li>
 	  <li><a href="{{route('empleados')}}">Empleados</a></li>
 	  <li><a href="{{route('proyectos.index')}}">Proyectos</a></li>
-	  <li><a href="{{route('departamentos')}}">Departamentos</a></li>
+	  <li><a href="{{route('departamentos.index')}}">Departamentos</a></li>
   </ul>
 </body>
 </html>

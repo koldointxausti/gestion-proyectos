@@ -13,6 +13,7 @@
         <th>Apellido</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Departamento</th>
         <th>Proyecto asignado</th>
       </tr>
       @foreach($empleados as $empleado)
@@ -23,11 +24,14 @@
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
         <td>
+          @isset($empleado->departamento)
+            <a href="{{route('departamentos.show',['id'=>$empleado->departamento->id])}}">{{$empleado->departamento->nombre}}</a>
+          @else - @endisset
+        </td>
+        <td>
           @isset($empleado->proyecto)
-            <a href="{{route('proyectos.index',['id'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a>
-          @else
-            -
-          @endisset
+            <a href="{{route('proyectos.show',['proyecto'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a>
+          @else - @endisset
         </td>
       </tr>
       @endforeach

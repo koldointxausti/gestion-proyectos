@@ -28,6 +28,12 @@
         <span>{{$empleado->telefono}}</span>
       </li>
 
+      @isset($empleado->departamento)
+      <li>
+        <strong>Departamento:</strong>
+        <span><a href="{{route('departamentos.show',['id'=>$empleado->departamento->id])}}">{{$empleado->departamento->nombre}}</a></span>
+      </li>
+      @endisset
       @isset($empleado->proyecto)
       <li>
         <strong>Proyecto asignado:</strong>

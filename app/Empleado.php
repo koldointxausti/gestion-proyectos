@@ -13,6 +13,6 @@ class Empleado extends Model
     }
     public function departamento()
     {
-    	return $this->belongsTo('App\departamento','id','departamento_id');
+    	return $this->belongsTo('App\Departamento','departamento_id','id');
     }
 }
