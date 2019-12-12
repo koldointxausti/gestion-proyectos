@@ -24,8 +24,10 @@ Route::get('/empleados','EmpleadoController@index')->name('empleados');
 Route::get('/empleado/{id}','EmpleadoController@show')->name('empleado');
 
 // PROYECTOS
-Route::get('/proyectos','ProyectoController@index')->name('proyectos'); // INDEX
-Route::get('/proyectos/create','ProyectoController@create')->name('proyectos-create'); // CREATE
-Route::post('/proyectos','ProyectoController@store')->name('proyectos-store'); // STORE
-Route::get('/proyecto/{id}','ProyectoController@show')->name('proyecto'); // SHOW
-Route::get('/proyectos/{id}/edit','ProyectoController@edit')->name('proyecto-edit');
+Route::get('/proyectos','ProyectoController@index')->name('proyectos.index'); // INDEX
+Route::get('/proyectos/create','ProyectoController@create')->name('proyectos.create'); // CREATE
+Route::post('/proyectos','ProyectoController@store')->name('proyectos.store'); // STORE
+Route::get('/proyecto/{proyecto}','ProyectoController@show')->name('proyectos.show'); // SHOW
+Route::get('/proyectos/{proyecto}/edit','ProyectoController@edit')->name('proyectos.edit');// EDIT
+Route::put('/proyectos/{proyecto}/update','ProyectoController@update')->name('proyectos.update'); //UPDATE
+Route::delete('/proyectos/{proyecto}/delete','ProyectoController@destroy')->name('proyectos.destroy'); // DESTROY

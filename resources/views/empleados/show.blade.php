@@ -31,7 +31,7 @@
       @isset($empleado->proyecto)
       <li>
         <strong>Proyecto asignado:</strong>
-        <span><a href="{{route('proyecto',['id'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a></span>
+        <span><a href="{{route('proyectos.show',['proyecto'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a></span>
       </li>
       @endisset
     </ul>

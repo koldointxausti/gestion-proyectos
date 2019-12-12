@@ -24,7 +24,7 @@
         <td>{{$empleado->telefono}}</td>
         <td>
           @isset($empleado->proyecto)
-            <a href="{{route('proyecto',['id'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a>
+            <a href="{{route('proyectos.index',['id'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a>
           @else
             -
           @endisset
