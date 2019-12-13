@@ -14,6 +14,7 @@ class DepartamentosSeeder extends Seeder
     public function run()
     {
         factory(Departamento::class,3)->create();
+
         /*
         DB::table('departamentos')->insert([
             'nombre' => 'Informática'

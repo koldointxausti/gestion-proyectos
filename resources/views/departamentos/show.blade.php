@@ -23,5 +23,9 @@
           @endforeach
         </ul>
       </li>
+       <li>
+        <strong>Jefe: </strong>
+        <span><a href="{{route('departamentos.show',['departamento'=>$departamento->jefe->id])}}">{{$departamento->jefe->nombre}}</a></span>
+      </li>
     </ul>
 @endsection

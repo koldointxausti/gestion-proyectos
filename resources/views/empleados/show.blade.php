@@ -5,7 +5,9 @@
 @section('content')
 
   <h2>{{$empleado->nombre}}</h2>
-
+  @isset($empleado->esJefe)
+    <h5 class="mb-3">Boss of <a href="{{route('proyectos.show',['proyecto'=>$empleado->esJefe->id])}}">{{$empleado->esJefe->nombre}}</a></h5>
+  @endisset
     <ul>
       <li>
         <strong>Id:</strong>

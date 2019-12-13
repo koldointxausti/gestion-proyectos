@@ -27,4 +27,11 @@ class Empleado extends Model
     {
     	return $this->belongsTo('App\Departamento','departamento_id','id');
     }
+
+    public function esJefe()
+    {
+        $departamento = $this->belongsTo('App\Departamento','id','jefe_id');
+        if(!$departamento) return false;
+        return $departamento;
+    }
 }

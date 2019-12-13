@@ -15,6 +15,7 @@
         <th>Telefono</th>
         <th>Departamento</th>
         <th>Proyecto asignado</th>
+        <th>Boss of</th>
       </tr>
       @foreach($empleados as $empleado)
       <tr>
@@ -32,6 +33,13 @@
           @isset($empleado->proyecto)
             <a href="{{route('proyectos.show',['proyecto'=>$empleado->proyecto->id])}}">{{$empleado->proyecto->nombre}}</a>
           @else - @endisset
+        </td>
+        <td>
+          @isset($empleado->esJefe)
+            <a href="{{route('proyectos.show',['proyecto'=>$empleado->esJefe->id])}}">{{$empleado->esJefe->nombre}}</a>
+          @else
+            -
+          @endisset
         </td>
       </tr>
       @endforeach
